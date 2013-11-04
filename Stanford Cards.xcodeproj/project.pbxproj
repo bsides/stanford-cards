@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5389CD3718273C2E00ACE849 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389CD3618273C2E00ACE849 /* PlayingCard.m */; };
+		5389CD3A1827435100ACE849 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389CD391827435100ACE849 /* PlayingCardDeck.m */; };
 		539575111824E6D400A60E65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539575101824E6D400A60E65 /* Foundation.framework */; };
 		539575131824E6D400A60E65 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539575121824E6D400A60E65 /* CoreGraphics.framework */; };
 		539575151824E6D400A60E65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539575141824E6D400A60E65 /* UIKit.framework */; };
@@ -21,6 +23,8 @@
 		539575321824E6D400A60E65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539575141824E6D400A60E65 /* UIKit.framework */; };
 		5395753A1824E6D400A60E65 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 539575381824E6D400A60E65 /* InfoPlist.strings */; };
 		5395753C1824E6D500A60E65 /* Stanford_CardsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5395753B1824E6D400A60E65 /* Stanford_CardsTests.m */; };
+		539575471824E93300A60E65 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 539575461824E93300A60E65 /* Deck.m */; };
+		5395754A1824E9E200A60E65 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 539575491824E9E200A60E65 /* Card.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5389CD3518273C2E00ACE849 /* PlayingCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCard.h; sourceTree = "<group>"; };
+		5389CD3618273C2E00ACE849 /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCard.m; sourceTree = "<group>"; };
+		5389CD381827435100ACE849 /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCardDeck.h; sourceTree = "<group>"; };
+		5389CD391827435100ACE849 /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCardDeck.m; sourceTree = "<group>"; };
 		5395750D1824E6D400A60E65 /* Stanford Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stanford Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		539575101824E6D400A60E65 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		539575121824E6D400A60E65 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +61,10 @@
 		539575371824E6D400A60E65 /* Stanford CardsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Stanford CardsTests-Info.plist"; sourceTree = "<group>"; };
 		539575391824E6D400A60E65 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5395753B1824E6D400A60E65 /* Stanford_CardsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Stanford_CardsTests.m; sourceTree = "<group>"; };
+		539575451824E93300A60E65 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
+		539575461824E93300A60E65 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
+		539575481824E9E200A60E65 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		539575491824E9E200A60E65 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,13 +124,19 @@
 		539575161824E6D400A60E65 /* Stanford Cards */ = {
 			isa = PBXGroup;
 			children = (
-				5395751F1824E6D400A60E65 /* AppDelegate.h */,
-				539575201824E6D400A60E65 /* AppDelegate.m */,
 				539575221824E6D400A60E65 /* Main.storyboard */,
+				539575451824E93300A60E65 /* Deck.h */,
+				539575461824E93300A60E65 /* Deck.m */,
 				539575251824E6D400A60E65 /* ViewController.h */,
+				539575481824E9E200A60E65 /* Card.h */,
+				539575491824E9E200A60E65 /* Card.m */,
 				539575261824E6D400A60E65 /* ViewController.m */,
 				539575281824E6D400A60E65 /* Images.xcassets */,
 				539575171824E6D400A60E65 /* Supporting Files */,
+				5389CD3518273C2E00ACE849 /* PlayingCard.h */,
+				5389CD3618273C2E00ACE849 /* PlayingCard.m */,
+				5389CD381827435100ACE849 /* PlayingCardDeck.h */,
+				5389CD391827435100ACE849 /* PlayingCardDeck.m */,
 			);
 			path = "Stanford Cards";
 			sourceTree = "<group>";
@@ -126,6 +144,8 @@
 		539575171824E6D400A60E65 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5395751F1824E6D400A60E65 /* AppDelegate.h */,
+				539575201824E6D400A60E65 /* AppDelegate.m */,
 				539575181824E6D400A60E65 /* Stanford Cards-Info.plist */,
 				539575191824E6D400A60E65 /* InfoPlist.strings */,
 				5395751C1824E6D400A60E65 /* main.m */,
@@ -249,7 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5389CD3718273C2E00ACE849 /* PlayingCard.m in Sources */,
+				5395754A1824E9E200A60E65 /* Card.m in Sources */,
+				539575471824E93300A60E65 /* Deck.m in Sources */,
 				539575271824E6D400A60E65 /* ViewController.m in Sources */,
+				5389CD3A1827435100ACE849 /* PlayingCardDeck.m in Sources */,
 				539575211824E6D400A60E65 /* AppDelegate.m in Sources */,
 				5395751D1824E6D400A60E65 /* main.m in Sources */,
 			);
@@ -460,6 +484,7 @@
 				539575411824E6D500A60E65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		539575421824E6D500A60E65 /* Build configuration list for PBXNativeTarget "Stanford CardsTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +493,7 @@
 				539575441824E6D500A60E65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
