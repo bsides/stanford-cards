@@ -8,6 +8,12 @@
 
 #import "CardMatchingGame.h"
 
+@interface CardMatchingGame()
+@property (nonatomic, readwrite) NSInteger score;
+@end
+
 @implementation CardMatchingGame
+
+
 
 @end
