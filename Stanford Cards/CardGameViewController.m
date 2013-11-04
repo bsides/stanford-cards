@@ -1,19 +1,32 @@
 //
-//  ViewController.m
+//  CardGameViewController.m
 //  Stanford Cards
 //
 //  Created by Rafael Pereira on 02/11/13.
 //  Copyright (c) 2013 BSIDES. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CardGameViewController.h"
+#import "PlayingCardDeck.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (nonatomic) int flipCount;
+@property (strong, nonatomic) Deck *deck;
 @end
 
 @implementation ViewController
+
+- (Deck *)deck
+{
+    if (!_deck) _deck = [self createDeck];
+    return _deck;
+}
+
+- (Deck *)createDeck
+{
+    return [[PlayingCardDeck alloc] init];
+}
 
 - (void)setFlipCount:(int)flipCount
 {
@@ -28,12 +41,16 @@
         [sender setBackgroundImage:[UIImage imageNamed:@"cardback"]
                           forState:UIControlStateNormal];
         [sender setTitle:@"" forState:UIControlStateNormal];
+        self.flipCount++;
     } else {
-        [sender setBackgroundImage:[UIImage imageNamed:@"cardfront"]
-                          forState:UIControlStateNormal];
-        [sender setTitle:@"A♣︎" forState:UIControlStateNormal];
+        Card *card = [self.deck drawRandomCard];
+        if (card) {
+            [sender setBackgroundImage:[UIImage imageNamed:@"cardfront"]
+                              forState:UIControlStateNormal];
+            [sender setTitle:card.contents forState:UIControlStateNormal];
+            self.flipCount++;
+        }
     }
-    self.flipCount++;
 }
 
 @end

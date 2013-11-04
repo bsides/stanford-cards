@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CardGameViewController.h
 //  Stanford Cards
 //
 //  Created by Rafael Pereira on 02/11/13.
